@@ -1,0 +1,159 @@
+/* Styles spécifiques à la veille techno */
+.veille-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.definition-section {
+    background: white;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.definition-section h1 {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+}
+
+.definition-content {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.definition-content p {
+    margin-bottom: 1.5rem;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 3rem 0;
+}
+
+.separator .line {
+    height: 1px;
+    background: rgba(0,0,0,0.1);
+    flex: 1;
+}
+
+.separator i {
+    color: var(--primary);
+    font-size: 1.8rem;
+}
+
+.actus-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.actu-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.actu-card:hover {
+    transform: translateY(-5px);
+}
+
+.actu-header {
+    padding: 1.5rem;
+    background: rgba(37, 99, 235, 0.05);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.actu-date {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.actu-header h3 {
+    margin: 0;
+    color: var(--secondary);
+}
+
+.actu-content {
+    padding: 1.5rem;
+}
+
+.actu-content p {
+    color: var(--secondary);
+    opacity: 0.9;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.actu-link {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sources-section {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.sources-list {
+    list-style: none;
+    padding: 0;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.sources-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 0.8rem 1.5rem;
+    background: rgba(37, 99, 235, 0.05);
+    border-radius: 50px;
+}
+
+/* Dark Mode */
+[data-theme="dark"] .definition-section,
+[data-theme="dark"] .actu-card {
+    background: rgba(255,255,255,0.05);
+}
+
+[data-theme="dark"] .separator .line {
+    background: rgba(255,255,255,0.1);
+}
+
+[data-theme="dark"] .actu-header {
+    background: rgba(37, 99, 235, 0.1);
+}
+
+[data-theme="dark"] .sources-list li {
+    background: rgba(255,255,255,0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .definition-section {
+        padding: 2rem;
+    }
+    
+    .actus-grid {
+        grid-template-columns: 1fr;
+    }
+}
