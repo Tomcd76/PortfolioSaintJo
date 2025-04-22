@@ -31,7 +31,7 @@
     background: white;
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .feature-list {
@@ -92,7 +92,7 @@
 .sisr-image img {
     width: 100%;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .debouches-section h2 {
@@ -110,7 +110,7 @@
     background: white;
     padding: 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     text-align: center;
     transition: transform 0.3s ease;
 }
@@ -128,4 +128,28 @@
 .job-card h3 {
     color: var(--secondary);
     margin: 0;
+}
+
+/* Dark Mode */
+[data-theme="dark"] .description-card,
+[data-theme="dark"] .alternance-card,
+[data-theme="dark"] .job-card {
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .sisr-section {
+    background: rgba(37, 99, 235, 0.1);
+}
+
+[data-theme="dark"] .sisr-image img {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .description-card,
+[data-theme="dark"] .sisr-list li,
+[data-theme="dark"] .feature-list li,
+[data-theme="dark"] .subtitle,
+[data-theme="dark"] .job-card h3 {
+    color: var(--text);
 }

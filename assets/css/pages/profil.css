@@ -1,4 +1,3 @@
-/* Styles spécifiques à la page profil */
 .profil-container {
     max-width: 900px;
     margin: 2rem auto;
@@ -9,7 +8,7 @@
     background: white;
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     margin-bottom: 2.5rem;
 }
 
@@ -83,4 +82,25 @@
 
 .skills-list i {
     color: var(--primary);
+}
+
+/* Dark Mode */
+[data-theme="dark"] .presentation-section,
+[data-theme="dark"] .parcours-section,
+[data-theme="dark"] .skills-section {
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .parcours-timeline::before {
+    background: var(--secondary);
+}
+
+[data-theme="dark"] .parcours-item::before {
+    border-color: var(--light);
+}
+
+[data-theme="dark"] .skills-category h3 {
+    color: var(--text);
+    border-bottom-color: var(--primary);
 }

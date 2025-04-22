@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missions - Tom Marchand-Chatelet</title>
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/pages/missions.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="glass-nav">
+        <div class="nav-brand">Tom Marchand-Chatelet</div>
+        <div class="nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="profil.html">Profil</a>
+            <a href="experience.html">Expérience</a>
+            <a href="missions.html" class="active">Missions</a>
+            <a href="bts.html">BTS SIO</a>
+            <a href="veille.html">Veille</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <button id="darkModeToggle">🌙</button>
+    </nav>
+
+    <main class="missions-container">
+        <header class="missions-header">
+            <h1>Mes Activités</h1>
+        </header>
+
+        <div class="tabs">
+            <button class="tab-button active" data-tab="pro">Réalisations en milieu professionnel</button>
+            <button class="tab-button" data-tab="school">Réalisations scolaires</button>
+        </div>
+
+        <div class="tab-content active" id="pro">
+            <!-- Activités professionnelles -->
+            <section class="mission-category">
+                <div class="category-header">
+                    <i class="fas fa-server"></i>
+                    <h3>Inventaire de serveurs et comptage des disques durs</h3>
+                </div>
+                <div class="mission-details">
+                    <p class="mission-quoi">Recensement et comptage des serveurs et disques durs dans l'entreprise.</p>
+                    <p class="mission-utilite">Permet de maintenir un inventaire à jour des équipements matériels.</p>
+                    <p class="mission-comment">Utilisation de logiciels comme OCS Inventory pour un recensement automatisé.</p>
+                </div>
+            </section>
+
+            <section class="mission-category">
+                <div class="category-header">
+                    <i class="fas fa-key"></i>
+                    <h3>Vérification des droits ACL sur les partages de fichiers</h3>
+                </div>
+                <div class="mission-details">
+                    <p class="mission-quoi">Vérification des droits d'accès (ACL) sur les partages de fichiers.</p>
+                    <p class="mission-utilite">Assure la sécurité des données partagées dans l'entreprise.</p>
+                    <p class="mission-comment">Contrôle de la configuration des droits d'accès pour respecter les bonnes pratiques de sécurité.</p>
+                </div>
+            </section>
+
+            <section class="mission-category">
+                <div class="category-header">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Application de la convention de nommage du matériel</h3>
+                </div>
+                <div class="mission-details">
+                    <p class="mission-quoi">Application de la convention de nommage des matériels au sein de l'entreprise.</p>
+                    <p class="mission-utilite">Uniformise et facilite la gestion des équipements et leur identification.</p>
+                    <p class="mission-comment">Respect des normes internes pour la gestion du matériel informatique.</p>
+                </div>
+            </section>
+
+            <section class="mission-category">
+                <div class="category-header">
+                    <i class="fas fa-database"></i>
+                    <h3>Utilisation de Sol@ris et OCS Inventory</h3>
+                </div>
+                <div class="mission-details">
+                    <p class="mission-quoi">Utilisation de la plateforme de ticketing Sol@ris et d'OCS Inventory pour l'inventaire des machines.</p>
+                    <p class="mission-utilite">Optimise la gestion des incidents et des équipements dans l'entreprise.</p>
+                    <p class="mission-comment">Création, gestion de tickets d'incidents et mise à jour de l'inventaire des équipements.</p>
+                </div>
+            </section>
+
+            <section class="mission-category">
+                <div class="category-header">
+                    <i class="fas fa-lock"></i>
+                    <h3>Intégration de machines dans Kerberos</h3>
+                </div>
+                <div class="mission-details">
+                    <p class="mission-quoi">Gestion de l'intégration des machines dans le système d'authentification Kerberos.</p>
+                    <p class="mission-utilite">Assure un contrôle d'accès sécurisé pour toutes les machines du réseau.</p>
+                    <p class="mission-comment">Configuration de Kerberos pour la gestion centralisée des accès utilisateurs et machines.</p>
+                </div>
+            </section>
+
+            <section class="mission-category">
+                <div class="category-header">
+                    <i class="fas fa-headset"></i>
+                    <h3>Hotline et support utilisateurs</h3>
+                </div>
+                <div class="mission-details">
+                    <p class="mission-quoi">Support aux utilisateurs pour résoudre des problèmes divers (LRPGN, certificats, Thunderbird, impressions, etc.).</p>
+                    <p class="mission-utilite">Assure une assistance efficace pour maintenir la productivité des utilisateurs.</p>
+                    <p class="mission-comment">Diagnostic des problèmes et résolution via une assistance à distance ou sur site.</p>
+                </div>
+            </section>
+
+            <section class="mission-category">
+                <div class="category-header">
+                    <i class="fas fa-tasks"></i>
+                    <h3>Gestion des tickets Sol@ris</h3>
+                </div>
+                <div class="mission-details">
+                    <p class="mission-quoi">Suivi et gestion des tickets via la plateforme Sol@ris pour le traitement des demandes et incidents.</p>
+                    <p class="mission-utilite">Permet de suivre chaque demande et de s'assurer de sa résolution dans les délais.</p>
+                    <p class="mission-comment">Création, gestion et clôture des tickets, avec suivi des actions réalisées.</p>
+                </div>
+            </section>
+
+            <section class="mission-category">
+                <div class="category-header">
+                    <i class="fas fa-server"></i>
+                    <h3>Configuration de serveurs et déploiement PXE</h3>
+                </div>
+                <div class="mission-details">
+                    <p class="mission-quoi">Configuration de serveurs SRFIC et SSR, et déploiement de systèmes via PXE.</p>
+                    <p class="mission-utilite">Automatisation de l'installation des systèmes pour gagner en efficacité.</p>
+                    <p class="mission-comment">Configuration des serveurs PXE pour déployer des systèmes d'exploitation sur plusieurs machines en même temps.</p>
+                </div>
+            </section>
+
+            <section class="mission-category">
+                <div class="category-header">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Gestion des mails (Dovecot, spam)</h3>
+                </div>
+                <div class="mission-details">
+                    <p class="mission-quoi">Administration des serveurs de messagerie Dovecot et gestion des spams.</p>
+                    <p class="mission-utilite">Assure le bon fonctionnement des communications par mail tout en bloquant les spams.</p>
+                    <p class="mission-comment">Configuration des filtres anti-spam et gestion des boîtes mail utilisateurs.</p>
+                </div>
+            </section>
+
+            <section class="mission-category">
+                <div class="category-header">
+                    <i class="fas fa-hdd"></i>
+                    <h3>Mise en place de serveurs (SAV, SMS)</h3>
+                </div>
+                <div class="mission-details">
+                    <p class="mission-quoi">Mise en place de serveurs de support technique (SAV) et de gestion de services (SMS).</p>
+                    <p class="mission-utilite">Permet de gérer les services après-vente et la gestion des SMS dans l'entreprise.</p>
+                    <p class="mission-comment">Configuration et maintenance des serveurs SAV et SMS pour une gestion optimale des services.</p>
+                </div>
+            </section>
+
+            <section class="mission-category">
+                <div class="category-header">
+                    <i class="fas fa-laptop"></i>
+                    <h3>Installation de PC Ubiquity (OS, chiffrement, VPN, cryptage)</h3>
+                </div>
+                <div class="mission-details">
+                    <p class="mission-quoi">Installation de PC Ubiquity, avec installation d'OS, chiffrement des disques, configuration VPN et cryptage des données.</p>
+                    <p class="mission-utilite">Assure la sécurité des postes de travail avec des outils de chiffrement et de protection des données.</p>
+                    <p class="mission-comment">Installation de logiciels de sécurité, configuration des VPN et mises à jour de sécurité.</p>
+                </div>
+            </section>
+        </div>
+
+        <div class="tab-content" id="school">
+            <!-- Activités scolaires -->
+            <section class="mission-category">
+                <div class="category-header">
+                    <i class="fas fa-users-cog"></i>
+                    <h3>Installation d’un Active Directory (AD)</h3>
+                </div>
+                <div class="mission-details">
+                    <p class="mission-quoi">Installation d'un serveur Active Directory et création d'un utilisateur.</p>
+                    <p class="mission-utilite">Permet la gestion centralisée des utilisateurs et des groupes dans un environnement Windows Server.</p>
+                    <p class="mission-comment">Configuration du contrôleur de domaine, création d'objets utilisateurs et gestion des droits d'accès.</p>
+                </div>
+            </section>
+
+            <section class="mission-category">
+                <div class="category-header">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Mise en place d’une GPO (Group Policy Object)</h3>
+                </div>
+                <div class="mission-details">
+                    <p class="mission-quoi">Création et gestion d’une GPO pour appliquer des politiques de groupe à des utilisateurs et ordinateurs.</p>
+                    <p class="mission-utilite">Permet d'automatiser la gestion des paramètres de sécurité et des configurations pour les utilisateurs et ordinateurs.</p>
+                    <p class="mission-comment">Mise en place des restrictions d'accès, des configurations système et des politiques de mot de passe via les GPOs.</p>
+                </div>
+            </section>
+
+            <section class="mission-category">
+                <div class="category-header">
+                    <i class="fas fa-share-alt"></i>
+                    <h3>Partage de fichiers</h3>
+                </div>
+                <div class="mission-details">
+                    <p class="mission-quoi">Mise en place et configuration d'un partage de fichiers sur un réseau local.</p>
+                    <p class="mission-utilite">Facilite l'accès aux fichiers pour les utilisateurs du réseau tout en contrôlant les droits d'accès.</p>
+                    <p class="mission-comment">Configuration de serveurs de fichiers sur Windows Server et gestion des autorisations.</p>
+                </div>
+            </section>
+
+            <section class="mission-category">
+                <div class="category-header">
+                    <i class="fas fa-lock"></i>
+                    <h3>Sécurisation de données sous Linux avec mdadm</h3>
+                </div>
+                <div class="mission-details">
+                    <p class="mission-quoi">Utilisation de `mdadm` pour la gestion et la sécurisation des données sur un serveur Linux avec RAID.</p>
+                    <p class="mission-utilite">Permet d'assurer la redondance des données et la tolérance aux pannes sur les disques durs.</p>
+                    <p class="mission-comment">Création d'un volume RAID, gestion des configurations et monitoring du stockage.</p>
+                </div>
+            </section>
+
+            <section class="mission-category">
+                <div class="category-header">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <h3>Mise en place d’une sauvegarde via Veeam</h3>
+                </div>
+                <div class="mission-details">
+                    <p class="mission-quoi">Installation et configuration de Veeam pour la gestion des sauvegardes de données et des machines virtuelles.</p>
+                    <p class="mission-utilite">Assure la protection des données critiques en automatisant les sauvegardes.</p>
+                    <p class="mission-comment">Configuration des tâches de sauvegarde, restauration et suivi des processus.</p>
+                </div>
+            </section>
+
+            <section class="mission-category">
+                <div class="category-header">
+                    <i class="fas fa-desktop"></i>
+                    <h3>Installation de différents systèmes d'exploitation (Debian, Windows Server), dualboot</h3>
+                </div>
+                <div class="mission-details">
+                    <p class="mission-quoi">Installation et configuration de systèmes d'exploitation comme Debian et Windows Server en dualboot.</p>
+                    <p class="mission-utilite">Permet de gérer plusieurs systèmes d'exploitation sur une même machine pour une meilleure flexibilité.</p>
+                    <p class="mission-comment">Création de partitions et installation des OS, configuration du bootloader pour choisir l'OS au démarrage.</p>
+                </div>
+            </section>
+
+            <section class="mission-category">
+                <div class="category-header">
+                    <i class="fas fa-cogs placeholder-icon"></i>
+                    <h3>Installation et configuration de pfSense</h3>
+                </div>
+                <div class="mission-details">
+                    <p class="mission-quoi">Installation et configuration d'un pare-feu pfSense pour sécuriser le réseau.</p>
+                    <p class="mission-utilite">Permet de contrôler et filtrer le trafic réseau tout en assurant la sécurité du système.</p>
+                    <p class="mission-comment">Configuration des règles de filtrage, des interfaces réseau et des VPN sur pfSense.</p>
+                </div>
+            </section>
+
+            <section class="mission-category">
+                <div class="category-header">
+                    <i class="fas fa-network-wired"></i>
+                    <h3>Installation d’un serveur DHCP sous Debian/Windows Server/pfSense</h3>
+                </div>
+                <div class="mission-details">
+                    <p class="mission-quoi">Installation et configuration d’un serveur DHCP pour attribuer des adresses IP automatiquement aux clients.</p>
+                    <p class="mission-utilite">Facilite la gestion des adresses IP et simplifie la configuration des clients réseau.</p>
+                    <p class="mission-comment">Paramétrage du serveur DHCP, gestion des plages d'adresses et des réservations.</p>
+                </div>
+            </section>
+
+            <section class="mission-category">
+                <div class="category-header">
+                    <i class="fas fa-globe"></i>
+                    <h3>Configuration d’IIS 10 (serveur web)</h3>
+                </div>
+                <div class="mission-details">
+                    <p class="mission-quoi">Installation et configuration de IIS 10 pour déployer des applications web sur un serveur Windows.</p>
+                    <p class="mission-utilite">Permet d'héberger et de gérer des sites web sur des serveurs Windows Server.</p>
+                    <p class="mission-comment">Création de sites web, gestion des permissions et configuration des services web via IIS.</p>
+                </div>
+            </section>
+
+            <section class="mission-category">
+                <div class="category-header">
+                    <i class="fas fa-server"></i>
+                    <h3>Configuration d’un serveur web sous Linux (Apache2)</h3>
+                </div>
+                <div class="mission-details">
+                    <p class="mission-quoi">Installation et configuration d'Apache2 sur Linux pour héberger des sites web.</p>
+                    <p class="mission-utilite">Permet d'héberger des sites web et de gérer des services web sur un serveur Linux.</p>
+                    <p class="mission-comment">Configuration d'Apache2, gestion des hôtes virtuels et mise en place de sécurités pour les applications web.</p>
+                </div>
+            </section>
+
+            <section class="mission-category">
+                <div class="category-header">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Mise en place d’un serveur GLPI</h3>
+                </div>
+                <div class="mission-details">
+                    <p class="mission-quoi">Installation et configuration de GLPI pour la gestion des ressources informatiques et des demandes d’assistance.</p>
+                    <p class="mission-utilite">Permet de suivre les demandes de support, les équipements et les interventions IT.</p>
+                    <p class="mission-comment">Configuration du serveur GLPI, gestion des tickets et des ressources matérielles.</p>
+                </div>
+            </section>
+
+            <section class="mission-category">
+                <div class="category-header">
+                    <i class="fas fa-network-wired"></i>
+                    <h3>Configuration de VLAN Access et VLAN Trunk (via interface)</h3>
+                </div>
+                <div class="mission-details">
+                    <p class="mission-quoi">Configuration de VLANs Access et VLANs Trunk sur des switches pour gérer les réseaux locaux virtuels.</p>
+                    <p class="mission-utilite">Permet de segmenter le réseau pour optimiser la gestion du trafic et la sécurité.</p>
+                    <p class="mission-comment">Création et gestion de VLANs sur des switches avec configuration des interfaces pour le routage.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const tabButtons = document.querySelectorAll(".tab-button");
+            const tabContents = document.querySelectorAll(".tab-content");
+
+            tabButtons.forEach((btn, i) => {
+                btn.addEventListener("click", () => {
+                    tabButtons.forEach(btn => btn.classList.remove("active"));
+                    tabContents.forEach(content => content.classList.remove("active"));
+                    btn.classList.add("active");
+                    document.getElementById(btn.dataset.tab).classList.add("active");
+                });
+            });
+        });
+    </script>
+
+    <script src="assets/js/darkmode.js"></script>
+    <script src="assets/js/animations.js"></script>
+</body>
+
+</html>
