@@ -2,28 +2,28 @@
 /* VARIABLES CSS                     */
 /* =================================== */
 :root {
-    --primary: #003087; /* Bleu profond */
-    --accent: #ED2939;  /* Rouge éclatant */
-    --secondary: #2c3e50; /* Gris foncé */
-    --light: #FFFFFF;   /* Blanc pur */
-    --dark: #2c3e50;    /* Gris foncé */
-    --text: #333;       /* Texte principal */
-    --background: #F9F9F9; /* Fond clair */
-    --glass-bg: rgba(255, 255, 255, 0.2); /* Fond verre clair */
-    --glass-border: rgba(0, 0, 0, 0.15);  /* Bordure verre clair */
+    --primary: #003087;
+    --accent: #ED2939;
+    --secondary: #2c3e50;
+    --light: #FFFFFF;
+    --dark: #2c3e50;
+    --text: #333;
+    --background: #F9F9F9;
+    --glass-bg: rgba(255, 255, 255, 0.2);
+    --glass-border: rgba(0, 0, 0, 0.15);
 }
 
 /* Mode sombre */
 [data-theme="dark"] {
-    --primary: #1E90FF; /* Bleu ciel */
-    --accent: #FF4040;  /* Rouge saturé */
-    --secondary: #E0E6ED; /* Gris-blanc */
-    --light: #121212;    /* Fond sombre */
-    --dark: #000000;     /* Noir */
-    --text: #E0E6ED;     /* Texte clair */
-    --background: #121212; /* Fond noir profond */
-    --glass-bg: rgba(18, 18, 18, 0.85); /* Fond verre sombre */
-    --glass-border: rgba(255, 255, 255, 0.15); /* Bordure verre sombre */
+    --primary: #1E90FF;
+    --accent: #FF4040;
+    --secondary: #E0E6ED;
+    --light: #121212;
+    --dark: #000000;
+    --text: #E0E6ED;
+    --background: #121212;
+    --glass-bg: rgba(18, 18, 18, 0.85);
+    --glass-border: rgba(255, 255, 255, 0.15);
 }
 
 /* =================================== */
@@ -32,7 +32,7 @@
 body {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
-    padding: 0;
+    padding: 55px 0 0 0; 
     background-color: var(--background);
     color: var(--text);
     transition: background 0.3s ease;
@@ -146,7 +146,7 @@ nav a.active {
 }
 
 .nav-links a.active {
-    color: var(--accent); /* Rouge pour lien actif */
+    color: var(--accent);
 }
 
 .nav-links a.active::after {

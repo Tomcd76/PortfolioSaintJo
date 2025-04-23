@@ -5,11 +5,26 @@
 }
 
 .presentation-section, .parcours-section, .skills-section {
-    background: white;
+    background: var(--light);
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.presentation-section::before,
+.parcours-section::before,
+.skills-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(to right, var(--primary), var(--light), var(--accent));
+    border-radius: 2px;
 }
 
 .presentation-section h2, .parcours-section h2, .skills-section h2 {
@@ -50,45 +65,59 @@
     height: 20px;
     border-radius: 50%;
     background: var(--primary);
-    border: 3px solid white;
+    border: 3px solid var(--light);
 }
 
 .parcours-item.current::before {
-    background: var(--secondary);
+    background: var(--accent);
 }
 
-.skills-category {
-    margin-bottom: 2rem;
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
 }
 
-.skills-category h3 {
-    color: var(--secondary);
-    border-bottom: 2px solid var(--primary);
-    padding-bottom: 0.5rem;
+.skill-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: 1px solid var(--glass-border);
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+.skill-card i {
+    font-size: 2rem;
+    color: var(--accent);
     margin-bottom: 1rem;
 }
 
-.skills-list {
-    list-style: none;
-    padding-left: 0;
+.skill-card h3 {
+    color: var(--secondary);
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
 }
 
-.skills-list li {
-    margin-bottom: 0.8rem;
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-}
-
-.skills-list i {
-    color: var(--primary);
+.skill-card p {
+    color: var(--secondary);
+    opacity: 0.8;
+    font-size: 0.9rem;
+    line-height: 1.5;
 }
 
 /* Dark Mode */
 [data-theme="dark"] .presentation-section,
 [data-theme="dark"] .parcours-section,
 [data-theme="dark"] .skills-section {
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--background);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
@@ -97,10 +126,19 @@
 }
 
 [data-theme="dark"] .parcours-item::before {
-    border-color: var(--light);
+    border-color: var(--secondary);
 }
 
-[data-theme="dark"] .skills-category h3 {
+[data-theme="dark"] .parcours-item.current::before {
+    background: var(--accent);
+}
+
+[data-theme="dark"] .skill-card {
+    background: var(--glass-bg);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .skill-card h3,
+[data-theme="dark"] .skill-card p {
     color: var(--text);
-    border-bottom-color: var(--primary);
 }

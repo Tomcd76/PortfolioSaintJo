@@ -8,18 +8,36 @@
 .experience-header {
     text-align: center;
     margin-bottom: 3rem;
+    position: relative;
 }
+
+
 
 .experience-header h1 {
     color: var(--primary);
 }
 
 .discovery-section, .missions-section, .skills-section {
-    background: white;
+    background: var(--light);
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     margin-bottom: 3rem;
+    position: relative;
+}
+
+.discovery-section::before,
+.missions-section::before,
+.skills-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(to right, var(--primary), var(--light), var(--accent));
+    border-radius: 2px;
 }
 
 .section-header {
@@ -30,12 +48,13 @@
 }
 
 .military-badge {
-    background: #d4edda;
-    color: #155724;
+    background: var(--glass-bg);
+    color: var(--accent);
     padding: 0.3rem 1rem;
     border-radius: 50px;
     font-size: 0.9rem;
     font-weight: bold;
+    border: 1px solid var(--glass-border);
 }
 
 .learning-grid {
@@ -46,15 +65,17 @@
 }
 
 .learning-card {
-    background: rgba(37, 99, 235, 0.05);
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
     padding: 1.5rem;
     border-radius: 8px;
     border-left: 3px solid var(--primary);
+    border: 1px solid var(--glass-border);
 }
 
 .learning-card i {
     font-size: 2rem;
-    color: var(--primary);
+    color: var(--accent);
     margin-bottom: 1rem;
 }
 
@@ -90,7 +111,7 @@
     width: 50px;
     height: 50px;
     background: var(--primary);
-    color: white;
+    color: var(--light);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -99,25 +120,28 @@
 }
 
 .mission-content {
-    background: rgba(37, 99, 235, 0.03);
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
     padding: 1.5rem;
     border-radius: 8px;
-    border: 1px solid rgba(37, 99, 235, 0.1);
+    border: 1px solid var(--glass-border);
 }
 
 .environment-card {
-    background: rgba(37, 99, 235, 0.05);
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
     padding: 1.5rem;
     border-radius: 8px;
     margin-bottom: 2rem;
     display: flex;
     align-items: center;
     gap: 1rem;
+    border: 1px solid var(--glass-border);
 }
 
 .environment-card i {
     font-size: 2.5rem;
-    color: var(--primary);
+    color: var(--accent);
 }
 
 .software-grid {
@@ -128,16 +152,18 @@
 }
 
 .software-card {
-    background: white;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     text-align: center;
+    border: 1px solid var(--glass-border);
 }
 
 .software-icon {
     font-size: 2rem;
-    color: var(--primary);
+    color: var(--accent);
     margin-bottom: 1rem;
 }
 
@@ -154,10 +180,9 @@
 }
 
 .security-list i {
-    color: var(--primary);
+    color: var(--accent);
 }
 
-/* Nouveaux styles */
 .missions-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -166,12 +191,14 @@
 }
 
 .mission-category {
-    background: white;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
     border-radius: 12px;
     padding: 1.5rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     border-top: 4px solid var(--primary);
     transition: transform 0.3s ease;
+    border: 1px solid var(--glass-border);
 }
 
 .mission-category:hover {
@@ -187,7 +214,7 @@
 
 .category-header i {
     font-size: 1.5rem;
-    color: var(--primary);
+    color: var(--accent);
     background: rgba(37, 99, 235, 0.1);
     width: 45px;
     height: 45px;
@@ -225,40 +252,6 @@
     margin-left: -1em;
 }
 
-/* Dark mode */
-[data-theme="dark"] .mission-category,
-[data-theme="dark"] .discovery-section,
-[data-theme="dark"] .missions-section,
-[data-theme="dark"] .skills-section,
-[data-theme="dark"] .software-card {
-    background: rgba(255, 255, 255, 0.05);
-    border-top-color: var(--secondary);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-[data-theme="dark"] .mission-list li {
-    color: var(--text);
-}
-
-[data-theme="dark"] .learning-card,
-[data-theme="dark"] .mission-content,
-[data-theme="dark"] .environment-card {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.1);
-}
-
-[data-theme="dark"] .missions-timeline::before {
-    background: var(--secondary);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .missions-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Styles pour la section logiciels */
 .software-categories {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -267,11 +260,13 @@
 }
 
 .software-category {
-    background: white;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
     border-radius: 12px;
     padding: 1.5rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     border-left: 4px solid var(--primary);
+    border: 1px solid var(--glass-border);
 }
 
 .category-title {
@@ -285,7 +280,7 @@
 
 .category-title i {
     font-size: 1.5rem;
-    color: var(--primary);
+    color: var(--accent);
 }
 
 .category-title h3 {
@@ -314,7 +309,7 @@
 
 .software-icon {
     font-size: 1.3rem;
-    color: var(--primary);
+    color: var(--accent);
     background: rgba(37, 99, 235, 0.1);
     width: 40px;
     height: 40px;
@@ -337,10 +332,32 @@
     opacity: 0.8;
 }
 
-/* Dark mode */
+/* Dark Mode */
+[data-theme="dark"] .mission-category,
+[data-theme="dark"] .discovery-section,
+[data-theme="dark"] .missions-section,
+[data-theme="dark"] .skills-section,
+[data-theme="dark"] .software-card,
 [data-theme="dark"] .software-category {
-    background: rgba(255, 255, 255, 0.05);
-    border-left-color: var(--secondary);
+    background: var(--glass-bg);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .mission-list li,
+[data-theme="dark"] .software-info h4,
+[data-theme="dark"] .software-info p {
+    color: var(--text);
+}
+
+[data-theme="dark"] .learning-card,
+[data-theme="dark"] .mission-content,
+[data-theme="dark"] .environment-card {
+    background: var(--glass-bg);
+    border-color: var(--glass-border);
+}
+
+[data-theme="dark"] .missions-timeline::before {
+    background: var(--secondary);
 }
 
 [data-theme="dark"] .software-item:hover {
@@ -349,6 +366,10 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+    .missions-grid {
+        grid-template-columns: 1fr;
+    }
+
     .software-categories {
         grid-template-columns: 1fr;
     }

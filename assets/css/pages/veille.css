@@ -6,12 +6,25 @@
 }
 
 .definition-section {
-    background: white;
+    background: var(--light);
     padding: 3rem;
     border-radius: 12px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     margin-bottom: 3rem;
     text-align: center;
+    position: relative;
+}
+
+.definition-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(to right, var(--primary), var(--light), var(--accent));
+    border-radius: 2px;
 }
 
 .definition-section h1 {
@@ -44,7 +57,7 @@
 }
 
 .separator i {
-    color: var(--primary);
+    color: var(--accent);
     font-size: 1.8rem;
 }
 
@@ -56,11 +69,13 @@
 }
 
 .actu-card {
-    background: white;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
+    border: 1px solid var(--glass-border);
 }
 
 .actu-card:hover {
@@ -69,8 +84,8 @@
 
 .actu-header {
     padding: 1.5rem;
-    background: rgba(37, 99, 235, 0.05);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    background: var(--glass-bg);
+    border-bottom: 1px solid var(--glass-border);
 }
 
 .actu-date {
@@ -105,9 +120,26 @@
     gap: 0.5rem;
 }
 
+.actu-link:hover {
+    color: var(--accent);
+}
+
 .sources-section {
     margin-top: 4rem;
     text-align: center;
+    position: relative;
+}
+
+.sources-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(to right, var(--primary), var(--light), var(--accent));
+    border-radius: 2px;
 }
 
 .sources-list {
@@ -125,8 +157,10 @@
     align-items: center;
     gap: 0.7rem;
     padding: 0.8rem 1.5rem;
-    background: rgba(37, 99, 235, 0.05);
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
     border-radius: 50px;
+    border: 1px solid var(--glass-border);
 }
 
 .sources-section h2 {
@@ -143,13 +177,14 @@
 }
 
 .source-card {
-    background: white;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
     border-radius: 12px;
     padding: 2rem;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
     text-align: center;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--glass-border);
 }
 
 .source-card:hover {
@@ -167,7 +202,7 @@
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
-    color: var(--primary);
+    color: var(--accent);
 }
 
 .source-card h3 {
@@ -195,36 +230,34 @@
 }
 
 .source-link:hover {
-    color: #2563eb;
+    color: var(--accent);
 }
 
 /* Dark Mode */
 [data-theme="dark"] .definition-section,
 [data-theme="dark"] .actu-card,
-[data-theme="dark"] .source-card {
-    background: rgba(255, 255, 255, 0.05);
+[data-theme="dark"] .source-card,
+[data-theme="dark"] .sources-list li {
+    background: var(--glass-bg);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 [data-theme="dark"] .separator .line {
-    background: rgba(255, 255, 255, 0.1);
+    background: var(-- Glass-border);
 }
 
 [data-theme="dark"] .actu-header {
-    background: rgba(37, 99, 235, 0.1);
-    border-bottom-color: rgba(255, 255, 255, 0.1);
-}
-
-[data-theme="dark"] .sources-list li {
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--glass-bg);
+    border-bottom-color: var(--glass-border);
 }
 
 [data-theme="dark"] .source-icon {
     background: rgba(37, 99, 235, 0.2);
 }
 
-[data-theme="dark"] .source-card {
-    border-color: rgba(255, 255, 255, 0.1);
+[data-theme="dark"] .source-card,
+[data-theme="dark"] .actu-card {
+    border-color: var(--glass-border);
 }
 
 /* Responsive */

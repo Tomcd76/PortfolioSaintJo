@@ -8,6 +8,19 @@
 .bts-header {
     text-align: center;
     margin-bottom: 3rem;
+    position: relative;
+}
+
+.bts-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(to right, var(--primary), var(--light), var(--accent));
+    border-radius: 2px;
 }
 
 .bts-header h1 {
@@ -28,10 +41,12 @@
 }
 
 .description-card, .alternance-card {
-    background: white;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--glass-border);
 }
 
 .feature-list {
@@ -47,7 +62,7 @@
 }
 
 .feature-list i {
-    color: var(--primary);
+    color: var(--accent);
     margin-top: 0.2rem;
 }
 
@@ -68,10 +83,23 @@
 }
 
 .sisr-section {
-    background: rgba(37, 99, 235, 0.05);
+    background: var(--light);
     padding: 2rem;
     border-radius: 12px;
     margin-bottom: 3rem;
+    position: relative;
+}
+
+.sisr-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(to right, var(--primary), var(--light), var(--accent));
+    border-radius: 2px;
 }
 
 .sisr-content {
@@ -95,6 +123,22 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+.debouches-section {
+    position: relative;
+}
+
+.debouches-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(to right, var(--primary), var(--light), var(--accent));
+    border-radius: 2px;
+}
+
 .debouches-section h2 {
     text-align: center;
     margin-bottom: 2rem;
@@ -107,12 +151,14 @@
 }
 
 .job-card {
-    background: white;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     text-align: center;
     transition: transform 0.3s ease;
+    border: 1px solid var(--glass-border);
 }
 
 .job-card:hover {
@@ -121,7 +167,7 @@
 
 .job-card i {
     font-size: 2.5rem;
-    color: var(--primary);
+    color: var(--accent);
     margin-bottom: 1rem;
 }
 
@@ -134,12 +180,12 @@
 [data-theme="dark"] .description-card,
 [data-theme="dark"] .alternance-card,
 [data-theme="dark"] .job-card {
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--glass-bg);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 [data-theme="dark"] .sisr-section {
-    background: rgba(37, 99, 235, 0.1);
+    background: var(--background);
 }
 
 [data-theme="dark"] .sisr-image img {

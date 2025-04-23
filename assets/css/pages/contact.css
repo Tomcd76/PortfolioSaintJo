@@ -1,7 +1,21 @@
 .contact-container {
     max-width: 1200px;
-    margin: 8rem auto 3rem auto; /* Ajusté pour passer sous la nav fixée */
+    margin: 8rem auto 3rem auto;
     padding: 0 2rem;
+    position: relative;
+    background: var(--light);
+}
+
+.contact-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(to right, var(--primary), var(--light), var(--accent));
+    border-radius: 2px;
 }
 
 .contact-container h1 {
@@ -18,10 +32,12 @@
 }
 
 .contact-form {
-    background: white;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--glass-border);
 }
 
 .form-group {
@@ -39,7 +55,7 @@
 .form-group textarea {
     width: 100%;
     padding: 0.8rem;
-    border: 1px solid #ddd;
+    border: 1px solid var(--glass-border);
     border-radius: 8px;
     font-family: 'Open Sans', sans-serif;
 }
@@ -50,7 +66,7 @@
 
 .submit-btn {
     background: var(--primary);
-    color: white;
+    color: var(--light);
     border: none;
     padding: 1rem 2rem;
     border-radius: 8px;
@@ -64,15 +80,17 @@
 }
 
 .submit-btn:hover {
-    background: var(--secondary);
+    background: var(--accent);
     transform: translateY(-2px);
 }
 
 .contact-info {
-    background: white;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--glass-border);
 }
 
 .contact-info h2 {
@@ -105,20 +123,24 @@
 }
 
 .social-icons a:hover {
-    color: var(--primary);
+    color: var(--accent);
     transform: scale(1.1);
 }
 
 /* Dark Mode */
+[data-theme="dark"] .contact-container {
+    background: var(--background);
+}
+
 [data-theme="dark"] .contact-form,
 [data-theme="dark"] .contact-info {
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--glass-bg);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 [data-theme="dark"] .form-group input,
 [data-theme="dark"] .form-group textarea {
-    border-color: rgba(255, 255, 255, 0.2);
-    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--glass-border);
+    background: var(--glass-bg);
     color: var(--text);
 }
